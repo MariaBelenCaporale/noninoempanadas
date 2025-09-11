@@ -17,12 +17,13 @@ const Navbar = () => {
                     <img className='logoNav' src={Logo} alt='Logo Nonino' />
                 </Link>
                 <div className='navegacionTotal'>
-                <Link to="/" className='navegacion'>NOSOTROS</Link>
-                <Link to="/" className='navegacion'>SUCURSALES</Link>
-                <Link to="/" className='navegacion'>CONTACTO</Link>
+                <Link to="/" className='navegacion'>Sucursales</Link>
+                <Link to="/" className='navegacion'>Empanadas</Link>
+                <Link to="/" className='navegacion'>Nosotros</Link>
+                <Link to="/" className='navegacion'>Contacto</Link>
                 </div>
             <Button 
-                titulo= "PEDIR ONLINE"
+                titulo= "Pedir Online"
                 onClick={() => window.open('https://noninoempanadas.com/pedidos/', '_blank')}
             />
             </div>

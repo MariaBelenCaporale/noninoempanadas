@@ -7,25 +7,36 @@
     font-family: "Chillax-Medium";
     src: url("../../assets/fonts/Chillax/Chillax-Medium.otf") format("truetype");
 }
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("../../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
 
 
 .card {
     -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.10);
     overflow: hidden;
-    width: 350px;
-    height: 350px;
-    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px;
+}
+.informacionCard {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 1em;
 }
-
 .cardImg {
-    width: 100%;
+    width: 250px;
+    height: 200px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 8px;
 }
 
 .fotoVega {
@@ -35,13 +46,13 @@
 .textosCard {
     display: flex;
     flex-direction: column;
-    padding: 20px 40px 40px 40px;
+    padding: 0px 20px;
     align-items: flex-start;
     gap: .5em;
 }
 
 .tituloCardLugar {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-family: 'Chillax-Bold';
     color: #1e1e1e;
 }
@@ -49,7 +60,7 @@
 .textoCardLugar {
     color: #1e1e1e;
     font-size: .9em;
-    font-family: 'Chillax-Medium';
+    font-family: 'Poppins-Regular';
 }
 
 .iconoText {

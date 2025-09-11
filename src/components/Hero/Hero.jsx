@@ -1,36 +1,25 @@
-import { useState, useEffect } from 'react';
 import './styles.css';
-import Empanadas from '../../assets/imagenes/empanadas.png';
-import EmpanadaDos from '../../assets/imagenes/empanadaDos.png';
-import EmpanadaTres from '../../assets/imagenes/empanadaTres.png';
+import Empanadas from '../../assets/imagenes/empanadasHero.png';
+import Button from '../Button/Button';
 
-const images = [Empanadas, EmpanadaDos, EmpanadaTres];
+
 
 const Hero = () => {
-    const [current, setCurrent] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrent((prev) => (prev + 1) % images.length);
-        }, 3000);
-        return () => clearInterval(interval);
-    }, []);
-
     return (
-        <div className="heroComponente">
-            <div className='contieneTextosHero'>
-                <h2 className="tituloHero">¡Vas a volver!</h2>
-                <p className='textoHero'>Con Nonino empanadas resolvé tus comidas, fácil y rico.</p>
+        <div className='contenedorHero'>
+            <div className='contieneTextoHero'>
+                <div>
+                    <h1 className='tituloHero'>Lorem ipsum latert <span className='tituloHeroItalic'>Lorem & lorems</span></h1>
+                    <p className='textoHero'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente dolorem quos possimus eligendi culpa sunt voluptate perspiciatis provident! Ratione non rerum dicta. </p>
+                </div>
+                <Button
+                    titulo="Pedir Online"
+                    onClick={""}
+                />
             </div>
-            <div className="carousel">
-                {images.map((img, index) => (
-                    <img
-                        key={index}
-                        src={img}
-                        alt={`Empanada ${index}`}
-                        className={index === current ? 'active' : 'inactive'}
-                    />
-                ))}
+
+            <div className='contieneImgHero'>
+                <img className='imgHero' src={Empanadas} alt='Foto empanadas' />
             </div>
         </div>
     );

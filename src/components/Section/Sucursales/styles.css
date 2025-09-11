@@ -1,8 +1,52 @@
-.contieneCardSucursales {
+@font-face {
+    font-family: "Chillax-Bold";
+    src: url("../../assets//fonts/Chillax/Chillax-Bold.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Chillax-Medium";
+    src: url("../../assets//fonts/Chillax/Chillax-Bold.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("../../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+
+
+
+.contieneCardSucursalesTexto {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10em;
     width: 100%;
-    height: 400px;
+    height: 100vh;
+}
+.contieneCardSucursales {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+}
+
+.contenedorSucursalesTextos {
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloSucursales {
+    font-size: 2em;
+    font-family: 'Chillax-Bold';
+    text-align: start;
+    color: #1e1e1e;
+}
+
+.textoSucursales {
+    font-family: 'Poppins-Regular';
+    font-size: 1em;
+    text-align: start;
+    color: #1e1e1e;
 }

@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("../../assets/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik-Bold";
+    src: url("../../assets/fonts/Rubik/Rubik-Bold.ttf") format("truetype");
+}
+
+
+
+.subtituloBanner {
+    color: #EB0029;
+    font-size: 1em;
+    font-family: 'Poppins-Regular';
+}
+
+.bannerTitulo {
+    font-family: 'Rubik-Bold';
+    font-size: 2em;
+    width: 600px;
+    color: #010F1C;
+    text-align: center;
+}
+
+.bannerTituloContenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.contieneBanner {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+}
+
+.ordenPasos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.textosBannerPasos {
+    font-size: .9em;
+    font-family: 'Poppins-Regular';
+    text-align: center;
+}
+
+.tituloPasos {
+    color: #010F1C;
+    font-family: 'Poppins-Bold';
+    font-size: 1em;
+}
+
+.pasosImgTextos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+.imgPasos {
+    margin-bottom: 20px;
+}
