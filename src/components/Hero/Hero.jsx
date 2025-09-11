@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import './styles.css';
 import Empanadas from '../../assets/imagenes/empanadas.png';
-import EmpanadaDos from '../../assets/imagenes/empanadaDos.jpg';
+import EmpanadaDos from '../../assets/imagenes/empanadaDos.png';
+import EmpanadaTres from '../../assets/imagenes/empanadaTres.png';
 
-const images = [Empanadas, EmpanadaDos, Empanadas]; 
+const images = [Empanadas, EmpanadaDos, EmpanadaTres]; 
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
