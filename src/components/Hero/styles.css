@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Chillax-Bold";
+    src: url("../../assets//fonts/Chillax/Chillax-Bold.otf") format("truetype");
+}
+
+
+.heroComponente {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.tituloHero {
+  color: #FEBB4D;
+  position: absolute;
+  padding: 0 20px;
+  font-size: 3em;
+  font-family: 'Chillax-Bold';
+  z-index: 2;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel img.active {
+  opacity: 1;
+}
+
+.carousel img.inactive {
+  opacity: 0;
+}

@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "Chillax-Bold";
+    src: url("../../assets//fonts/Chillax/Chillax-Bold.otf") format("truetype");
+}
+
+
+
+.botonPrincipal {
+    background-color: #FEBB4D;
+    border: none;
+    width: 150px;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.tituloButton {
+    color: #1e1e1e;
+    font-size: 1em;
+    width: 100%;
+    font-family: 'Chillax-Bold';
+}
