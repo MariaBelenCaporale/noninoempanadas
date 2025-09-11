@@ -5,46 +5,64 @@
 
 
 .heroComponente {
-  width: 100%;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  border-radius: 50px;
-  overflow: hidden;
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.contieneTextosHero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    background-color: #0000007d;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
 
 .tituloHero {
-  color: #FEBB4D;
-  position: absolute;
-  padding: 0 20px;
-  font-size: 3em;
-  font-family: 'Chillax-Bold';
-  z-index: 2;
+    color: #FEBB4D;
+    font-family: 'Chillax-Bold';
+    font-size: 5em;
+    text-align: center;
+}
+
+.textoHero {
+    color: white;
+    font-family: 'Chillax-Medium';
+    font-size: 1.3em;
+    text-align: center;
 }
 
 .carousel {
-  width: 100%;
-  height: 100%;
-  position: relative;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .carousel img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .carousel img.active {
-  opacity: 1;
+    opacity: 1;
 }
 
 .carousel img.inactive {
-  opacity: 0;
+    opacity: 0;
 }

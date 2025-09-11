@@ -1,4 +1,5 @@
 import Button from '../Button/Button';
+import Logo from '../../assets/imagenes/logo.png';
 import './styles.css';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
 
@@ -12,7 +13,9 @@ const Navbar = () => {
     return (
         <div className='contenedorNav'>
             <div className='contenedorUl'>
-                <Link to="/" className='navegacion'>LOGO</Link>
+                <Link to="/" className='navegacion'>
+                    <img className='logoNav' src={Logo} alt='Logo Nonino' />
+                </Link>
                 <div className='navegacionTotal'>
                 <Link to="/" className='navegacion'>NOSOTROS</Link>
                 <Link to="/" className='navegacion'>SUCURSALES</Link>
