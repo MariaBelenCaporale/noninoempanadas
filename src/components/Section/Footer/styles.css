@@ -16,12 +16,34 @@
 .footer {
     width: 100%;
     height: auto;
-    background-color: #EB0029;
 }
 
 .contieneFooter {
     display: flex;
     width: 100%;
     height: 300px;
-
+}
+.tituloFooter {
+    font-size: 1.2em;
+    color: #010F1C;
+    font-family: 'Rubik-Bold';
+}
+.navegacionTotalFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+}
+.navigacionFooter {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+.navegacionOkFooter {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: end;
+    gap: 4em;
 }
