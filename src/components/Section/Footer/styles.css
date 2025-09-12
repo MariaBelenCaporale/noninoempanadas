@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Rubik-Bold";
+    src: url("../../../assets/fonts/Rubik/Rubik-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Rubik-BoldItalic";
+    src: url("../../../assets/fonts/Rubik/Rubik-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url("../../../assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    background-color: #EB0029;
+}
+
+.contieneFooter {
+    display: flex;
+    width: 100%;
+    height: 300px;
+
+}

@@ -18,7 +18,6 @@ const Hero = () => {
                     <p className='textoHero'>Empanadas para compartir, celebrar o simplemente darte un gusto. Probá nuestras empanadas recién horneadas, hechas con la receta de siempre.</p>
                 </div>
                 <div style={{ display: 'flex', gap: '1em' }}>
-
                     <Button
                         titulo="Pedir Online"
                         onClick={() => window.open('https://noninoempanadas.com/pedidos/', '_blank')}
