@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import CardEmpanadas from '../../CardEmpanadas/CardEmpandas';
-import Carne from '../../../assets/imagenes/empanadaDos.png';
+import CarneMendocina from '../../../assets/imagenes/empanadaDos.png';
 import Pollo from '../../../assets/imagenes/empanadas.png';
-import JamonQueso from '../../../assets/imagenes/empanadaDos.png';
+import CarneSalteña from '../../../assets/imagenes/empanadaDos.png';
 import Verdura from '../../../assets/imagenes/empanadas.png';
 import Champi from '../../../assets/imagenes/empanadaDos.png';
 import Aceituna from '../../../assets/imagenes/empanadaTres.png';
@@ -11,8 +11,8 @@ import './styles.css';
 
 
 const empanadasData = {
-    tradicionales: [Carne, Pollo, JamonQueso, Carne, Pollo, JamonQueso, Carne, Pollo],
-    especiales: [Champi, Aceituna, JamonQueso, Pollo],
+    tradicionales: [CarneMendocina, CarneSalteña, CarneTucumana, CarnePampeana, Árabe, HamburguesayCheddar, ChorizzoalaPomarola, Mondongo, Pollo, Polloalverdeo, Capresse, Queso, cebollaypanceta, Jamónyqueso, Roquefort, jamónynuez, Verdura, Humita, Español, CuatroQuesos, SalteadodeVegetales, Calabazayqueso, Soja],
+    especiales: [Atún, Langostinos, Neuquena, PancetayCiruela, Cordero, Mejica, Trucha, CiervoAhumado, QuesoAhumado, Osobuco],
     vegetarianas: [Verdura, Champi, Aceituna, Verdura],
 };
 
@@ -33,10 +33,10 @@ const Empanadas = () => {
         <div className='empanadasContenedor'>
 
             <div className='contenedorEmpanadasTextos'>
-                <div className='textoEmpanadas'>
-                    <p className='subituloSuc'>Nuestras empanadas</p>
-                    <h2 className='tituloSucursales'>Nuestra gran variedad</h2>
-                    <p className='textoSucursales'>
+                <div className='textoEmpanadasTotal'>
+                    <p className='subituloEmpanadas'>Nuestras empanadas</p>
+                    <h2 className='tituloEmpanadas'>Nuestra gran variedad</h2>
+                    <p className='textoEmpanadas'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aut vitae ipsa adipisci nobis! Neque dolore itaque saepe.
                     </p>
                 </div>

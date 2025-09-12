@@ -1,5 +1,8 @@
 import './styles.css';
-import Empanadas from '../../assets/imagenes/empanadas.png';
+// import Empanadas from '../../assets/imagenes/empanadas.png';
+import Empanadas from '../../assets/imagenes/plato.png';
+import Flecha from '../../assets/imagenes/flecha.png';
+import Reloj from '../../assets/imagenes/reloj.png';
 import Button from '../Button/Button';
 import ButtonSec from '../ButtonSec/ButtonSec';
 
@@ -14,17 +17,20 @@ const Hero = () => {
                     <p className='textoHero'>Empanadas para compartir, celebrar o simplemente darte un gusto. Probá nuestras empanadas recién horneadas, hechas con la receta de siempre.</p>
                 </div>
                 <div style={{ display: 'flex', gap: '1em' }}>
-                <Button
-                    titulo="Pedir Online"
-                    onClick={""}
-                />
-                <ButtonSec 
-                    titulo='Contactanos'
-                    onClick={""}
-                />
+                    <Button
+                        titulo="Pedir Online"
+                        onClick={""}
+                    />
+                    <ButtonSec
+                        titulo='Contactanos'
+                        onClick={""}
+                    />
                 </div>
             </div>
-
+            <div className="imgFlota">
+                <img className="imgFlecha" src={Flecha} alt="Flecha" />
+                <img className="imgReloj" src={Reloj} alt="Flecha" />
+            </div>
             <div className='contieneImgHero'>
                 <img className='imgHero' src={Empanadas} alt='Foto empanadas' />
             </div>

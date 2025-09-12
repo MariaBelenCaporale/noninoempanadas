@@ -39,10 +39,30 @@
     height: 70vh;
     overflow: hidden;
     border-radius: 18px;
+    position: relative;
+}
+
+.imgFlota {
+    z-index: 9;
+}
+
+.imgReloj {
+    top: 200px;
+    position: absolute;
+    right: 100px;
+    bottom: 0;
+}
+
+.imgFlecha {
+    top: 150px;
+    position: absolute;
+    right: 700px;
+    bottom: 0;
+    rotate: 260deg;
 }
 
 .imgHero {
-    width: auto;
+    width: 500px;
 }
 
 .tituloHero {

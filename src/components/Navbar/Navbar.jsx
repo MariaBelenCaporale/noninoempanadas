@@ -17,8 +17,8 @@ const Navbar = () => {
                     <img className='logoNav' src={Logo} alt='Logo Nonino' />
                 </Link>
                 <div className='navegacionTotal'>
-                <Link to="/" className='navegacion'>Sucursales</Link>
                 <Link to="/" className='navegacion'>Empanadas</Link>
+                <Link to="/" className='navegacion'>Sucursales</Link>
                 <Link to="/" className='navegacion'>Nosotros</Link>
                 <Link to="/" className='navegacion'>Contacto</Link>
                 </div>

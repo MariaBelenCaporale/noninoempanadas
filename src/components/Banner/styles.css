@@ -31,6 +31,7 @@
     justify-content: space-between;
     width: 100%;
 }
+
 .contieneBanner {
     height: 80vh;
     display: flex;
@@ -45,6 +46,9 @@
     align-items: end;
     justify-content: space-between;
     width: 100%;
+    background: rgba(255, 221, 204, 0.25);
+    padding: 20px;
+    border-radius: 18px;
 }
 
 .textosBannerPasos {
@@ -70,6 +74,7 @@
 .imgPasos {
     margin-bottom: 20px;
 }
+
 .textosOrdenBanner {
     display: flex;
     flex-direction: column;

@@ -11,18 +11,42 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
 }
 
-.textoEmpanadas {
+.textoEmpanadasTotal {
     width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.subituloEmpanadas {
+    color: #EB0029;
+    font-size: 1em;
+    font-family: 'Poppins-Regular';
+    text-align: center;
+}
+.textoEmpanadas {
+    font-family: 'Poppins-Regular';
+    font-size: 1em;
+    text-align: center;
+    color: #1e1e1e;
+}
+.tituloEmpanadas {
+    font-family: 'Rubik-Bold';
+    font-size: 2em;
+    width: 600px;
+    color: #010F1C;
+    text-align: center;
 }
 
 .carousel {
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 100%;
 }
 
 .cardsContainer {
@@ -60,12 +84,14 @@
     font-family: 'Poppins-Medium';
 }
 
-.tipoSwitch:hover, .tipoSwitch.active {
+.tipoSwitch:hover,
+.tipoSwitch.active {
     background-color: #CA3001;
     color: white;
     transition: .2s all ease-in-out;
     border: 1px solid #CA3001;
 }
+
 .flechaBtnCarousel {
     background-color: #EB0029;
     border: none;
@@ -79,6 +105,12 @@
     justify-content: center;
     cursor: pointer;
 }
+
 .flechaBtnCarousel:hover {
     background-color: #CA3001;
+}
+
+.flechaBtnCarousel:disabled {
+    background-color: rgb(197, 197, 197);
+    cursor: not-allowed;
 }
