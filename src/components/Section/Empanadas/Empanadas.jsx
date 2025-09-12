@@ -59,7 +59,7 @@ const Empanadas = () => {
     };
 
     return (
-        <div className='empanadasContenedor'>
+        <div className='empanadasContenedor' id='empanadas'>
 
             <div className='contenedorEmpanadasTextos'>
                 <div className='textoEmpanadasTotal'>

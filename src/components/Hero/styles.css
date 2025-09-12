@@ -51,7 +51,21 @@
     position: absolute;
     right: 100px;
     bottom: 0;
+    animation: flotar 3s ease-in-out infinite;
 }
+
+@keyframes flotar  {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 
 .imgFlecha {
     top: 150px;
@@ -59,6 +73,12 @@
     right: 700px;
     bottom: 0;
     rotate: 260deg;
+}
+.imgCard {
+    position: absolute;
+    right: 70px;
+    bottom: 0;
+    animation: flotar 5s ease-in-out infinite;
 }
 
 .imgHero {

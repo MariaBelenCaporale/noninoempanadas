@@ -6,7 +6,7 @@ import './styles.css';
 
 const Surcursales = () => {
     return (
-        <div className='contieneCardSucursalesTexto'>
+        <div className='contieneCardSucursalesTexto' id='sucursales'>
             <div className='contenedorSucursalesTextos'>
                 <p className='subituloSuc'>Nuestras sucursales</p>
                 <h2 className='tituloSucursales'>Visitá nuestras sucursales</h2>

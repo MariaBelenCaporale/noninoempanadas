@@ -1,6 +1,7 @@
 import './styles.css';
 // import Empanadas from '../../assets/imagenes/empanadas.png';
 import Empanadas from '../../assets/imagenes/plato.png';
+import CardFoto from '../../assets/imagenes/card.png';
 import Flecha from '../../assets/imagenes/flecha.png';
 import Reloj from '../../assets/imagenes/reloj.png';
 import Button from '../Button/Button';
@@ -29,6 +30,7 @@ const Hero = () => {
             </div>
             <div className="imgFlota">
                 <img className="imgFlecha" src={Flecha} alt="Flecha" />
+                <img className="imgCard" src={CardFoto} alt="Flecha" />
                 <img className="imgReloj" src={Reloj} alt="Flecha" />
             </div>
             <div className='contieneImgHero'>

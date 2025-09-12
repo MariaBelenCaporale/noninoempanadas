@@ -9,6 +9,12 @@ const Navbar = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const path = location.pathname;
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <div className='contenedorNav'>
@@ -17,15 +23,16 @@ const Navbar = () => {
                     <img className='logoNav' src={Logo} alt='Logo Nonino' />
                 </Link>
                 <div className='navegacionTotal'>
-                <Link to="/" className='navegacion'>Empanadas</Link>
-                <Link to="/" className='navegacion'>Sucursales</Link>
-                <Link to="/" className='navegacion'>Nosotros</Link>
-                <Link to="/" className='navegacion'>Contacto</Link>
+                    <span className='navegacion' onClick={() => scrollToSection('empanadas')}>Empanadas</span>
+                    <span className='navegacion' onClick={() => scrollToSection('sucursales')}>Sucursales</span>
+                    <span className='navegacion' onClick={() => scrollToSection('nosotros')}>Nosotros</span>
+                    <span className='navegacion' onClick={() => scrollToSection('contacto')}>Contacto</span>
                 </div>
-            <Button 
-                titulo= "Pedir Online"
-                onClick={() => window.open('https://noninoempanadas.com/pedidos/', '_blank')}
-            />
+
+                <Button
+                    titulo="Pedir Online"
+                    onClick={() => window.open('https://noninoempanadas.com/pedidos/', '_blank')}
+                />
             </div>
         </div>
     )
