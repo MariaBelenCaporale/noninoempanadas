@@ -1,0 +1,17 @@
+
+
+
+.contenedorEmpanada {
+    width: 300px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sabor {
+    object-fit: cover;
+    width: auto;
+}

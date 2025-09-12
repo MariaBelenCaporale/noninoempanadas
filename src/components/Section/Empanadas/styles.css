@@ -1,0 +1,84 @@
+.empanadasContenedor {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorEmpanadasTextos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.textoEmpanadas {
+    width: 500px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cardsContainer {
+    display: flex;
+    overflow: hidden;
+    gap: 10px;
+}
+
+.cardsContainer>* {
+    min-width: 200px;
+}
+
+.switch {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    padding: 50px 0px;
+}
+
+.tipoSwitch {
+    background-color: white;
+    border: 1px solid #EB0029;
+    width: 150px;
+    padding: 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #EB0029;
+    font-size: .9em;
+    font-family: 'Poppins-Medium';
+}
+
+.tipoSwitch:hover, .tipoSwitch.active {
+    background-color: #CA3001;
+    color: white;
+    transition: .2s all ease-in-out;
+    border: 1px solid #CA3001;
+}
+.flechaBtnCarousel {
+    background-color: #EB0029;
+    border: none;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.flechaBtnCarousel:hover {
+    background-color: #CA3001;
+}
