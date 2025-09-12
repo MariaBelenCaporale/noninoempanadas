@@ -1,18 +1,47 @@
 import { useState } from 'react';
+import './styles.css';
 import CardEmpanadas from '../../CardEmpanadas/CardEmpandas';
 import CarneMendocina from '../../../assets/imagenes/empanadaDos.png';
 import Pollo from '../../../assets/imagenes/empanadas.png';
 import CarneSalteña from '../../../assets/imagenes/empanadaDos.png';
 import Verdura from '../../../assets/imagenes/empanadas.png';
 import Champi from '../../../assets/imagenes/empanadaDos.png';
+import CarneTucumana from '../../../assets/imagenes/empanadaTres.png';
+import CarnePampeana from '../../../assets/imagenes/empanadaTres.png';
+import Árabe from '../../../assets/imagenes/empanadaTres.png';
+import HamburguesayCheddar from '../../../assets/imagenes/empanadaTres.png';
+import ChorizzoalaPomarola from '../../../assets/imagenes/empanadaTres.png';
+import Mondongo from '../../../assets/imagenes/empanadaTres.png';
 import Aceituna from '../../../assets/imagenes/empanadaTres.png';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import './styles.css';
+import Polloalverdeo from '../../../assets/imagenes/empanadaTres.png';
+import Capresse from '../../../assets/imagenes/empanadaDos.png';
+import Queso from '../../../assets/imagenes/empanadaTres.png';
+import cebollaypanceta from '../../../assets/imagenes/empanadaDos.png';
+import Jamónyqueso from '../../../assets/imagenes/empanadas.png';
+import Roquefort from '../../../assets/imagenes/empanadaTres.png';
+import jamónynuez from '../../../assets/imagenes/empanadaDos.png';
+import Humita from '../../../assets/imagenes/empanadas.png';
+import Española from '../../../assets/imagenes/empanadaTres.png';
+import CuatroQuesos from '../../../assets/imagenes/empanadaDos.png';
+import SalteadodeVegetales from '../../../assets/imagenes/empanadas.png';
+import Calabazayqueso from '../../../assets/imagenes/empanadaTres.png';
+import Soja from '../../../assets/imagenes/empanadaDos.png';
+import Atun from '../../../assets/imagenes/empanadas.png';
+import Langostinos from '../../../assets/imagenes/empanadaTres.png';
+import Neuquina from '../../../assets/imagenes/empanadaDos.png';
+import PancetayCiruela from '../../../assets/imagenes/empanadas.png';
+import Cordero from '../../../assets/imagenes/empanadaTres.png';
+import Mejicana from '../../../assets/imagenes/empanadaDos.png';
+import Trucha from '../../../assets/imagenes/empanadas.png';
+import CiervoAhumado from '../../../assets/imagenes/empanadaTres.png';
+import QuesoAhumado from '../../../assets/imagenes/empanadaDos.png';
+import Osobuco from '../../../assets/imagenes/empanadas.png';
 
 
 const empanadasData = {
-    tradicionales: [CarneMendocina, CarneSalteña, CarneTucumana, CarnePampeana, Árabe, HamburguesayCheddar, ChorizzoalaPomarola, Mondongo, Pollo, Polloalverdeo, Capresse, Queso, cebollaypanceta, Jamónyqueso, Roquefort, jamónynuez, Verdura, Humita, Español, CuatroQuesos, SalteadodeVegetales, Calabazayqueso, Soja],
-    especiales: [Atún, Langostinos, Neuquena, PancetayCiruela, Cordero, Mejica, Trucha, CiervoAhumado, QuesoAhumado, Osobuco],
+    tradicionales: [CarneMendocina, CarneSalteña, CarneTucumana, CarnePampeana, Árabe, HamburguesayCheddar, ChorizzoalaPomarola, Mondongo, Pollo, Polloalverdeo, Capresse, Queso, cebollaypanceta, Jamónyqueso, Roquefort, jamónynuez, Verdura, Humita, Española, CuatroQuesos, SalteadodeVegetales, Calabazayqueso, Soja],
+    especiales: [Atun, Langostinos, Neuquina, PancetayCiruela, Cordero, Mejicana, Trucha, CiervoAhumado, QuesoAhumado, Osobuco],
     vegetarianas: [Verdura, Champi, Aceituna, Verdura],
 };
 
