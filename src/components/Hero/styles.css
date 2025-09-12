@@ -18,9 +18,9 @@
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: row;
-    height: 80vh;
+    height: 90vh;
 }
 
 .contieneTextoHero {
@@ -28,17 +28,21 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 2em;
-    width: 800px;
+    width: 500px;
 }
 
 .contieneImgHero {
     display: flex;
-    width: 100%;
+    width: 700px;
     align-items: center;
     justify-content: center;
+    height: 70vh;
+    overflow: hidden;
+    border-radius: 18px;
 }
+
 .imgHero {
-    width: 70%;
+    width: auto;
 }
 
 .tituloHero {

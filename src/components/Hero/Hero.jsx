@@ -1,5 +1,5 @@
 import './styles.css';
-import Empanadas from '../../assets/imagenes/empanadasHero.png';
+import Empanadas from '../../assets/imagenes/empanadas.png';
 import Button from '../Button/Button';
 
 
