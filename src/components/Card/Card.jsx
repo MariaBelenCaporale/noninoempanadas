@@ -3,7 +3,7 @@ import { PhoneCall, MapPin, Clock } from 'lucide-react';
 
 
 
-const Card = ({ sucursal, ubicacion, telefono, local, horarios, dias, hora, horaDos }) => {
+const Card = ({ sucursal, ubicacion, telefono, local }) => {
     return (
         <div className='card'>
             <div className='cardImg'>
@@ -23,20 +23,6 @@ const Card = ({ sucursal, ubicacion, telefono, local, horarios, dias, hora, hora
                         <p className='textoCardLugar'>{telefono}</p>
                     </div>
                 </div>
-
-                
-                    <div className='textosCard'>
-                    <p className='tituloCardLugar'>{horarios}</p>
-                    <div className='diasYhora'>
-                        <p className='textoCardLugar'>{dias}</p>
-                        <div className='iconoText'>
-                            <Clock size={20} color='#CA3001' />
-                            <p className='textoCardLugar'>{hora}</p>
-                            <p className='textoCardLugar'>{horaDos}</p>
-                        </div>
-                    </div>
-                    </div>
-                
             </div>
         </div>
     )

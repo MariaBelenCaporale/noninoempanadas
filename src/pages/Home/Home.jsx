@@ -7,7 +7,7 @@ import './styles.css';
 
 const Home = () => {
     return (
-        <div>
+        <div className='homePage'>
             <Hero />
             <Banner />
             <Empanadas />
