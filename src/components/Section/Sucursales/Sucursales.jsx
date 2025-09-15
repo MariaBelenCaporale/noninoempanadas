@@ -19,14 +19,18 @@ const Surcursales = () => {
                         sucursal={'El Molino'}
                         local={Molino}
                         telefono={'(2972)410-400'}
-                        ubicacion={'Ruta 40 km. 2217'}
+                        ubicaciones={[
+                            "Nonino Empanadas, Sigrand, San Martín de los Andes, Neuquén"
+                        ]}
                         
                     />
                     <Card
                         sucursal={'Centro'}
                         local={Centro}
                         telefono={'(2972)410-400'}
-                        ubicacion={'Gral. Villegas 745'}
+                        ubicaciones={[
+                            "Gral. Villegas 745, San Martín de los Andes"
+                        ]}
                         
                     />
                 </div>

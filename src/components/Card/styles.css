@@ -26,6 +26,12 @@
     padding: 10px;
     flex-direction: column;
     justify-content: space-between;
+    background-color: white;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    transition: all .3s ease-in-out;
 }
 
 .informacionCard {

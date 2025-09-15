@@ -19,7 +19,7 @@ const CardEmpanadas = ({ empanada, nombre, descripcion, click }) => {
                 </div>
                 <Button 
                     titulo={'Pedir Online'} 
-                    onClick={() => window.open('https://noninoempanadas.com/pedidos/', '_blank')}    
+                    onClick={() => ('')}    
                 />
             </div>
         </div>

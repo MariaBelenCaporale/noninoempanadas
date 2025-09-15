@@ -1,9 +1,13 @@
 import './styles.css';
-import { PhoneCall, MapPin, Clock } from 'lucide-react';
+import { PhoneCall, MapPin } from 'lucide-react';
+import ButtonSec from '../../components/ButtonSec/ButtonSec';
 
+const Card = ({ sucursal, ubicaciones = [], telefono, local }) => {
+    const handleOpenMaps = (ubicacion) => {
+        const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ubicacion)}`;
+        window.open(url, '_blank');
+    };
 
-
-const Card = ({ sucursal, ubicacion, telefono, local }) => {
     return (
         <div className='card'>
             <div className='cardImg'>
@@ -14,18 +18,31 @@ const Card = ({ sucursal, ubicacion, telefono, local }) => {
                 <div className='textosCard'>
                     <p className='tituloCardLugar'>{sucursal}</p>
 
-                    <div className='iconoText'>
-                        <MapPin size={20} color='#CA3001' />
-                        <p className='textoCardLugar'>{ubicacion}</p>
-                    </div>
+                    {ubicaciones.map((ubi, index) => (
+                        <div key={index} className='iconoText'>
+                            <div>
+                            <MapPin size={20} color='#CA3001' />
+                            </div>
+                            <p className='textoCardLugar'>{ubi}</p>
+                        </div>
+                    ))}
+
                     <div className='iconoText'>
                         <PhoneCall size={20} color='#CA3001' />
                         <p className='textoCardLugar'>{telefono}</p>
                     </div>
                 </div>
+
+                {ubicaciones.map((ubi, index) => (
+                    <ButtonSec
+                        key={index}
+                        titulo={`Ver en Maps`}
+                        onClick={() => handleOpenMaps(ubi)}
+                    />
+                ))}
             </div>
         </div>
-    )
+    );
 };
 
 export default Card;
