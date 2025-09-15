@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Poppins-Medium";
+    src: url("../../assets//fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+}
+
+.botonTer {
+    background-color: white;
+    border: none;
+    width: auto;
+    padding: 15px 0px;
+    display: flex;
+    cursor: pointer;
+    color: #EB0029;
+    font-size: .9em;
+    font-family: 'Poppins-Medium';
+}
+
+.botonTer:hover {
+    color: #FFBC21;
+    transition: .2s all ease-in-out;
+}

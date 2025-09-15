@@ -52,6 +52,7 @@
     gap: 3em;
     width: 100%;
     flex-direction: column;
+    margin-top: 100px;
 }
 
 .cardsContainer {
@@ -102,25 +103,38 @@
     border: 1px solid #CA3001;
 }
 
-.flechaBtnCarousel {
-    background-color: #EB0029;
-    border: none;
-    padding: 10px;
-    height: 40px;
-    width: 40px;
-    border-radius: 100px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
 
-.flechaBtnCarousel:hover {
-    background-color: #CA3001;
-}
 
-.flechaBtnCarousel:disabled {
-    background-color: rgb(197, 197, 197);
-    cursor: not-allowed;
+@media screen and (max-width: 480px) {
+    .empanadasContenedor {
+        padding: 0px;
+    }
+
+    .textoEmpanadasTotal {
+        width: 100%;
+    }
+
+    .subituloEmpanadas {
+        font-size: .8em;
+    }
+
+    .tituloEmpanadas {
+        font-size: 1.8em;
+        width: 100%;
+    }
+
+    .textoEmpanadas {
+        font-size: .9em;
+    }
+
+    .switch {
+        gap: 1em;
+    }
+
+    .tipoSwitch {
+        width: 120px;
+        font-size: .8em;
+        padding: 10px;
+    }
+
 }

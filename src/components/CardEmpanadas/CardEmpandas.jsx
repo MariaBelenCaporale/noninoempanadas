@@ -1,6 +1,6 @@
 import './styles.css';
 import '../Button/Button';
-import Button from '../Button/Button';
+import ButtonTer from '../ButtonTer/ButtonTer';
 
 const CardEmpanadas = ({ empanada, nombre, descripcion, click }) => {
     return (
@@ -17,7 +17,7 @@ const CardEmpanadas = ({ empanada, nombre, descripcion, click }) => {
 
 
                 </div>
-                <Button 
+                <ButtonTer 
                     titulo={'Pedir Online'} 
                     onClick={() => ('')}    
                 />

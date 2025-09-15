@@ -5,7 +5,7 @@ import CarneMendocina from '../../../assets/imagenes/empanadaDos.png';
 import Verdura from '../../../assets/imagenes/empanadas.png';
 import CuatroQuesos from '../../../assets/imagenes/empanadaDos.png';
 import CiervoAhumado from '../../../assets/imagenes/empanadaTres.png';
-import ButtonSec from '../../../components/ButtonSec/ButtonSec';
+import ButtonTer from '../../../components/ButtonTer/ButtonTer';
 
 
 
@@ -121,12 +121,12 @@ const Empanadas = () => {
                 </div>
 
                 {currentData.length > itemsToShow && (
-                    <ButtonSec
+                    <ButtonTer
                         className='verMasBtn'
                         titulo={visibleCount >= currentData.length ? 'Mostrar menos' : 'Mostrar más'}
                         onClick={handleToggle}>
 
-                    </ButtonSec>
+                    </ButtonTer>
                 )}
 
             </div>
