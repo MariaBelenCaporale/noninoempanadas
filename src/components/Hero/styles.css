@@ -54,13 +54,15 @@
     animation: flotar 3s ease-in-out infinite;
 }
 
-@keyframes flotar  {
+@keyframes flotar {
     0% {
         transform: translateY(0px);
     }
+
     50% {
         transform: translateY(-20px);
     }
+
     100% {
         transform: translateY(0px);
     }
@@ -74,6 +76,7 @@
     bottom: 0;
     rotate: 260deg;
 }
+
 .imgCard {
     position: absolute;
     right: 70px;
@@ -102,4 +105,50 @@
     font-size: 1.125em;
     font-family: 'Poppins-Medium';
     color: #333333;
+}
+
+@media screen and (max-width: 480px) {
+    .textoHero {
+        font-size: .9em;
+    }
+
+    .tituloHero {
+        font-size: 2em;
+    }
+
+    .contieneTextoHero {
+        width: 100%;
+    }
+
+    .contenedorHero {
+        flex-direction: column-reverse;
+        height: auto;
+        gap: 1em;
+    }
+
+    .contieneImgHero {
+        width: 400px;
+        height: 200px;
+    }
+
+    .imgHero {
+        width: 300px;
+    }
+
+    .imgFlecha {
+        top: 150px;
+        right: 250px;
+        width: 70px;
+        rotate: 228deg;
+    }
+
+    .imgReloj {
+        display: none;
+    }
+
+    .imgCard {
+        right: 0px;
+        bottom: 390px;
+        width: 200px;
+    }
 }

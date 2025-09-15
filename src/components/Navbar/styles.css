@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "Poppins-Medium";
-    src: url("../../assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-family: "Poppins-Medium";
+  src: url("../../assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
 }
 
 .contenedorNav {
@@ -10,6 +10,7 @@
 .logoNav {
   width: 60px;
 }
+
 .contenedorUl {
   padding: 20px 30px;
   display: flex;
@@ -31,6 +32,114 @@
   font-size: .9em;
   cursor: pointer;
 }
+
 .navegacion:hover {
   color: #CA3001;
+}
+
+@media screen and (max-width: 480px) {
+  .contenedorNav {
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #eee;
+  }
+
+  .contenedorUl {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logoNav {
+    height: 50px;
+  }
+
+  .navegacionTotal {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .navegacion {
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .navegacion:hover {
+    color: #c0392b;
+  }
+
+
+  .menuIcon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    transition: all 0.3s;
+  }
+
+  .bar.open:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .bar.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  .bar.open:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  
+  .btnMobile {
+    display: none;
+  }
+
+
+  @media (max-width: 768px) {
+    .menuIcon {
+      display: flex;
+    }
+
+    .navegacionTotal {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background: #fff;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem 2rem;
+      width: 250px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    .navegacionTotal.active {
+      transform: translateX(0);
+    }
+
+    .btnDesktop {
+      display: none;
+    }
+
+    .btnMobile {
+      display: block;
+      margin-top: 1rem;
+    }
+  }
+
+
 }
