@@ -2,61 +2,49 @@ import { useState } from 'react';
 import './styles.css';
 import CardEmpanadas from '../../CardEmpanadas/CardEmpandas';
 import CarneMendocina from '../../../assets/imagenes/empanadaDos.png';
-import Pollo from '../../../assets/imagenes/empanadas.png';
-import CarneSalteña from '../../../assets/imagenes/empanadaDos.png';
 import Verdura from '../../../assets/imagenes/empanadas.png';
-import Champi from '../../../assets/imagenes/empanadaDos.png';
-import CarneTucumana from '../../../assets/imagenes/empanadaTres.png';
-import CarnePampeana from '../../../assets/imagenes/empanadaTres.png';
-import Árabe from '../../../assets/imagenes/empanadaTres.png';
-import HamburguesayCheddar from '../../../assets/imagenes/empanadaTres.png';
-import ChorizzoalaPomarola from '../../../assets/imagenes/empanadaTres.png';
-import Mondongo from '../../../assets/imagenes/empanadaTres.png';
-import Aceituna from '../../../assets/imagenes/empanadaTres.png';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Polloalverdeo from '../../../assets/imagenes/empanadaTres.png';
-import Capresse from '../../../assets/imagenes/empanadaDos.png';
-import Queso from '../../../assets/imagenes/empanadaTres.png';
-import cebollaypanceta from '../../../assets/imagenes/empanadaDos.png';
-import Jamónyqueso from '../../../assets/imagenes/empanadas.png';
-import Roquefort from '../../../assets/imagenes/empanadaTres.png';
-import jamónynuez from '../../../assets/imagenes/empanadaDos.png';
-import Humita from '../../../assets/imagenes/empanadas.png';
-import Española from '../../../assets/imagenes/empanadaTres.png';
 import CuatroQuesos from '../../../assets/imagenes/empanadaDos.png';
-import SalteadodeVegetales from '../../../assets/imagenes/empanadas.png';
-import Calabazayqueso from '../../../assets/imagenes/empanadaTres.png';
-import Soja from '../../../assets/imagenes/empanadaDos.png';
-import Atun from '../../../assets/imagenes/empanadas.png';
-import Langostinos from '../../../assets/imagenes/empanadaTres.png';
-import Neuquina from '../../../assets/imagenes/empanadaDos.png';
-import PancetayCiruela from '../../../assets/imagenes/empanadas.png';
-import Cordero from '../../../assets/imagenes/empanadaTres.png';
-import Mejicana from '../../../assets/imagenes/empanadaDos.png';
-import Trucha from '../../../assets/imagenes/empanadas.png';
 import CiervoAhumado from '../../../assets/imagenes/empanadaTres.png';
-import QuesoAhumado from '../../../assets/imagenes/empanadaDos.png';
-import Osobuco from '../../../assets/imagenes/empanadas.png';
+import ButtonSec from '../../../components/ButtonSec/ButtonSec';
+
 
 
 const empanadasData = {
-    tradicionales: [CarneMendocina, CarneSalteña, CarneTucumana, CarnePampeana, Árabe, HamburguesayCheddar, ChorizzoalaPomarola, Mondongo, Pollo, Polloalverdeo, Capresse, Queso, cebollaypanceta, Jamónyqueso, Roquefort, jamónynuez, Verdura, Humita, Española, CuatroQuesos, SalteadodeVegetales, Calabazayqueso, Soja],
-    especiales: [Atun, Langostinos, Neuquina, PancetayCiruela, Cordero, Mejicana, Trucha, CiervoAhumado, QuesoAhumado, Osobuco],
-    vegetarianas: [Verdura, Champi, Aceituna, Verdura],
+  tradicionales: [
+    { imagen: CarneMendocina, nombre: 'Carne Mendocina', descripcion: 'Cebolla, carne, y ajo' },
+    { imagen: Verdura, nombre: 'Verdura', descripcion: 'Mix de verduras' },
+    { imagen: CuatroQuesos, nombre: 'Cuatro quesos', descripcion: 'Mozzarella, roquefort, provolone y parmesano' },
+    { imagen: CiervoAhumado, nombre: 'Ciervo Ahumado', descripcion: 'Ciervo, cebolla' },
+    { imagen: CarneMendocina, nombre: 'Carne Salteña', descripcion: 'Carne cortada a cuchillo, papa, huevo' },
+    { imagen: Verdura, nombre: 'Humita', descripcion: 'Choclo, cebolla, queso' },
+    { imagen: CuatroQuesos, nombre: 'Española', descripcion: 'Chorizo colorado, papa, huevo' },
+  ],
+  especiales: [
+    { imagen: CiervoAhumado, nombre: 'Ciervo Ahumado', descripcion: 'Ciervo, cebolla' },
+    { imagen: Verdura, nombre: 'Langostinos', descripcion: 'Langostinos, crema, ajo' },
+  ],
+  vegetarianas: [
+    { imagen: Verdura, nombre: 'Verdura', descripcion: 'Verduritas' },
+    { imagen: CuatroQuesos, nombre: 'Cuatro quesos', descripcion: 'Cuatro quesos' },
+  ],
 };
 
 const Empanadas = () => {
     const [tipo, setTipo] = useState('tradicionales');
-    const [startIndex, setStartIndex] = useState(0);
+    const [visibleCount, setVisibleCount] = useState(4);
     const itemsToShow = 4;
 
-    const handlePrev = () => {
-        setStartIndex(prev => Math.max(prev - itemsToShow, 0));
+    const currentData = empanadasData[tipo];
+
+    const handleToggle = () => {
+        if (visibleCount >= currentData.length) {
+            setVisibleCount(itemsToShow);
+        } else {
+            setVisibleCount(prev => prev + itemsToShow);
+        }
     };
 
-    const handleNext = () => {
-        setStartIndex(prev => Math.min(prev + itemsToShow, empanadasData[tipo].length - itemsToShow));
-    };
+
 
     return (
         <div className='empanadasContenedor' id='empanadas'>
@@ -74,19 +62,19 @@ const Empanadas = () => {
             <div className='switch'>
                 <button
                     className={`tipoSwitch ${tipo === 'tradicionales' ? 'active' : ''}`}
-                    onClick={() => { setTipo('tradicionales'); setStartIndex(0) }}
+                    onClick={() => { setTipo('tradicionales'); setVisibleCount(itemsToShow); }}
                 >
                     Tradicionales
                 </button>
                 <button
                     className={`tipoSwitch ${tipo === 'especiales' ? 'active' : ''}`}
-                    onClick={() => { setTipo('especiales'); setStartIndex(0) }}
+                    onClick={() => { setTipo('especiales'); setVisibleCount(itemsToShow) }}
                 >
                     Especiales
                 </button>
                 <button
                     className={`tipoSwitch ${tipo === 'vegetarianas' ? 'active' : ''}`}
-                    onClick={() => { setTipo('vegetarianas'); setStartIndex(0) }}
+                    onClick={() => { setTipo('vegetarianas'); setVisibleCount(itemsToShow)}}
                 >
                     Vegetarianas
                 </button>
@@ -95,13 +83,28 @@ const Empanadas = () => {
 
 
             <div className='carousel'>
-                <button className='flechaBtnCarousel' onClick={handlePrev} disabled={startIndex === 0}><ChevronLeft size={'24px'} /></button>
+                
                 <div className='cardsContainer'>
-                    {empanadasData[tipo].slice(startIndex, startIndex + itemsToShow).map((img, index) => (
-                        <CardEmpanadas key={index} empanada={img} />
+                    {currentData.slice(0, visibleCount).map((empanada, index) => (
+                        <CardEmpanadas 
+                        click={() => window.open('https://noninoempanadas.com/pedidos/', '_blank')}
+                            key={index} 
+                            empanada={empanada.imagen} 
+                            nombre={empanada.nombre}
+                            descripcion={empanada.descripcion}
+                        />
                     ))}
                 </div>
-                <button className='flechaBtnCarousel' onClick={handleNext} disabled={startIndex + itemsToShow >= empanadasData[tipo].length}><ChevronRight size={'24px'}/></button>
+
+                {currentData.length > itemsToShow && (
+                    <ButtonSec 
+                    className='verMasBtn' 
+                    titulo={visibleCount >= currentData.length ? 'Mostrar menos' : 'Mostrar más'}
+                    onClick={handleToggle}>
+                        
+                    </ButtonSec>
+                )}
+               
             </div>
         </div>
     );
