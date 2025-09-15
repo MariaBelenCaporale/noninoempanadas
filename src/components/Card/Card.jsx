@@ -1,6 +1,6 @@
 import './styles.css';
 import { PhoneCall, MapPin } from 'lucide-react';
-import ButtonSec from '../../components/ButtonSec/ButtonSec';
+import ButtonTer from '../../components/ButtonTer/ButtonTer';
 
 const Card = ({ sucursal, ubicaciones = [], telefono, local }) => {
     const handleOpenMaps = (ubicacion) => {
@@ -34,7 +34,7 @@ const Card = ({ sucursal, ubicaciones = [], telefono, local }) => {
                 </div>
 
                 {ubicaciones.map((ubi, index) => (
-                    <ButtonSec
+                    <ButtonTer
                         key={index}
                         titulo={`Ver en Maps`}
                         onClick={() => handleOpenMaps(ubi)}

@@ -82,3 +82,10 @@
     width: 100%;
     gap: 1em;
 }
+
+
+@media screen and (max-width: 480px)  {
+    .informacionCard {
+        align-items: center;
+    }
+}

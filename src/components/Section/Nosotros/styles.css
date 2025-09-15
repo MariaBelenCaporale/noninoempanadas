@@ -59,3 +59,28 @@
     color: #1e1e1e;
     background-color: white;
 }
+
+
+@media screen and (max-width: 480px) {
+    .contenedorNosotros {
+        flex-direction: column;
+        height: auto;
+        gap: 2em;
+    }
+    .videoContainer {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contieneNosotrosTexto {
+        width: 100%;
+    }
+    .nosotrosTexto {
+        font-size: .9em;
+    }
+    .nosotrosTitulo {
+        font-size: 1.8em;
+    }
+}

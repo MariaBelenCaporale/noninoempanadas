@@ -47,3 +47,19 @@
     justify-content: end;
     gap: 4em;
 }
+
+
+@media screen and (max-width: 480px) {
+    .contieneFooter {
+padding: 50px 0px;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2em;
+    }
+    .navegacionOkFooter {
+        gap: 1em;
+        justify-content: space-between;
+    }
+}

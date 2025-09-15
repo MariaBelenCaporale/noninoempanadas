@@ -85,9 +85,19 @@
 @media screen and (max-width: 480px) {
     .contenedorEmpanada {
         width: 40px;
+        padding: 15px;
     }
-
+    .descripcionEmpanada {
+        font-size: .8em;
+    }
     .nombreEmpanada {
-        font-size: 1.3em;
+        font-size: 1em;
+    }
+    .imgEmpanadas {
+        width: 100px;
+        height: 100px;
+    }
+    .sabor {
+        width: 250px;
     }
 }
