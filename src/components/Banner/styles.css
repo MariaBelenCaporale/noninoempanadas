@@ -104,4 +104,7 @@
     .imgPasos {
         width: 170px;
     }
+    .tituloPasos {
+            font-family: 'Poppins-Bold';
+    }
 }
