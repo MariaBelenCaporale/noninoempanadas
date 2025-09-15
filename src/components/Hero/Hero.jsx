@@ -10,6 +10,13 @@ import ButtonSec from '../ButtonSec/ButtonSec';
 
 
 const Hero = () => {
+      const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            setMenuOpen(false);
+        }
+    };
     return (
         <div className='contenedorHero'>
             <div className='contieneTextoHero'>
@@ -23,8 +30,8 @@ const Hero = () => {
                         onClick={() => window.open('https://noninoempanadas.com/pedidos/', '_blank')}
                     />
                     <ButtonSec
-                        titulo='Contactanos'
-                        onClick={""}
+                        titulo='Conocenos'
+                        onClick={() => scrollToSection('nosotros')}
                     />
                 </div>
             </div>
