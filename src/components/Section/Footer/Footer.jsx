@@ -1,6 +1,7 @@
 import './styles.css';
 import Logo from '../../../assets/imagenes/logo.png';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
+import { Instagram, Facebook } from 'lucide-react';
 
 
 const Footer = () => {
@@ -27,23 +28,25 @@ const Footer = () => {
                             <span className='navegacion' onClick={() => scrollToSection('empanadas')}>Empanadas</span>
                             <span className='navegacion' onClick={() => scrollToSection('sucursales')}>Sucursales</span>
                             <span className='navegacion' onClick={() => scrollToSection('nosotros')}>Nosotros</span>
-                            <span className='navegacion' onClick={() => scrollToSection('contacto')}>Contacto</span>
+
                         </div>
                     </div>
                     <div className='navigacionFooter'>
-                        <h2 className='tituloFooter'>Redes</h2>
+                        <h2 className='tituloFooter'>¡Seguinos!</h2>
                         <div className='navegacionTotalFooter'>
-                            <span className='navegacion'>Insta</span>
-                            <span className='navegacion'>Face?</span>
+                            <span className='navegacion'
+                                onClick={() => window.open('https://www.instagram.com/nonino.empanadas/', '_blank')}
+                            >
+                                <Instagram />Instagran</span>
+                            <span
+                                className='navegacion'
+                                onClick={() => window.open('https://www.facebook.com/noninoempanadas/?locale=es_LA', '_blank')}>
+                                <Facebook />
+                                Facebook
+                            </span>
                         </div>
                     </div>
-                    <div className='navigacionFooter'>
-                        <h2 className='tituloFooter'>¡Visitanos!</h2>
-                        <div className='navegacionTotalFooter'>
-                            <span className='navegacion'>Lugar 1</span>
-                            <span className='navegacion'>Lugar 2</span>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>

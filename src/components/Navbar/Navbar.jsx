@@ -35,7 +35,6 @@ const Navbar = () => {
                     <span className='navegacion' onClick={() => scrollToSection('empanadas')}>Empanadas</span>
                     <span className='navegacion' onClick={() => scrollToSection('sucursales')}>Sucursales</span>
                     <span className='navegacion' onClick={() => scrollToSection('nosotros')}>Nosotros</span>
-                    <span className='navegacion' onClick={() => scrollToSection('contacto')}>Contacto</span>
                     <Button
                         titulo="Pedir Online"
                         onClick={() => window.open('https://noninoempanadas.com/pedidos/', '_blank')}

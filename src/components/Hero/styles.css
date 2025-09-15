@@ -153,3 +153,70 @@
         width: 200px;
     }
 }
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .textoHero {
+        font-size: .9em;
+    }
+
+    .tituloHero {
+        font-size: 2em;
+    }
+
+    .contieneTextoHero {
+        width: 100%;
+    }
+
+    .contenedorHero {
+        flex-direction: column-reverse;
+        height: auto;
+        gap: 1em;
+        overflow: hidden;
+    }
+
+    .contieneImgHero {
+        width: 400px;
+        height: 200px;
+    }
+
+    .imgHero {
+        width: 300px;
+    }
+
+    .imgFlecha {
+        top: 150px;
+        right: 250px;
+        width: 70px;
+        rotate: 228deg;
+    }
+
+    .imgReloj {
+        display: none;
+    }
+
+    .imgCard {
+        right: 0px;
+        bottom: 390px;
+        width: 200px;
+    }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .imgHero {
+        width: 350px;
+    }
+.imgFlecha {
+    right: 500px;
+}
+    .contieneImgHero {
+        width: 700px;
+        overflow: unset;
+    }
+    .contenedorHero {
+        gap: 3em;
+    }
+    .tituloHero {
+        font-size: 3.5em;
+    }
+}

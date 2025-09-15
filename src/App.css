@@ -21,3 +21,13 @@ h1, h2, h3, p {
     padding: 0px 20px;
   }
 }
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    padding: 0px 20px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+    padding: 0px 70px;
+  }
+}

@@ -17,8 +17,9 @@ const Nosotros = () => {
                 />
             </div>
             <div className='contieneNosotrosTexto'>
+                <p className='subtituloNosotros'>Nosotros</p>
                 <h2 className='nosotrosTitulo'>El corazón de nuestras empanadas</h2>
-                <p className='nosotrosTexto'>Elaboramos cada empanada con dedicación, respetando la receta de siempre y asegurando calidad en cada paso..</p>
+                <p className='nosotrosTexto'>Elaboramos cada empanada con dedicación, respetando la receta de siempre y asegurando calidad en cada paso.</p>
             </div>
         </div>
     )

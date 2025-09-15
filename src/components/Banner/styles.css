@@ -84,7 +84,7 @@
 }
 
 
-@media screen and (max-width: 480px) {
+@media only screen and (min-width: 0px) and (max-width: 768px){
     .contieneBanner {
         height: auto;
         margin: 5em 0em;
@@ -100,11 +100,29 @@
         flex-direction: column;
         align-items: center;
         width: auto;
+        background: rgba(255, 221, 204, 0.25);
     }
     .imgPasos {
         width: 170px;
     }
     .tituloPasos {
             font-family: 'Poppins-Bold';
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .imgPasos {
+        width: 200px;
+    }
+    .pasosImgTextos {
+        width: 300px;
+    }
+    .textosBannerPasos, .tituloPasos {
+        text-align: center;
+        margin: 0px;
+    }
+    .textosOrdenBanner {
+            height: auto;
+            justify-content: space-between;
     }
 }
