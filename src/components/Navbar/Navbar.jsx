@@ -7,57 +7,42 @@ import { useNavigate, useLocation, Link } from 'react-router-dom';
 const Navbar = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const path = location.pathname;
-
     const [menuOpen, setMenuOpen] = useState(false);
 
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth' });
-            setMenuOpen(false); 
+            setMenuOpen(false);
         }
     };
 
     return (
-        <nav className="contenedorNav">
-            <div className="contenedorUl">
-                <Link to="/" className="navegacion">
-                    <img className="logoNav" src={Logo} alt="Logo Nonino" />
+        <div className='contenedorNav'>
+            <div className='contenedorUl'>
+                <Link to="/" className='navegacion'>
+                    <img className='logoNav' src={Logo} alt='Logo Nonino' />
                 </Link>
 
-               
-                <div className="menuIcon" onClick={() => setMenuOpen(!menuOpen)}>
-                    <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
-                    <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
-                    <div className={`bar ${menuOpen ? 'open' : ''}`}></div>
+      
+                <div className='hamburger' onClick={() => setMenuOpen(!menuOpen)}>
+                    <div className={`linea ${menuOpen ? 'rotate1' : ''}`}></div>
+                    <div className={`linea ${menuOpen ? 'fade' : ''}`}></div>
+                    <div className={`linea ${menuOpen ? 'rotate2' : ''}`}></div>
                 </div>
 
-     
                 <div className={`navegacionTotal ${menuOpen ? 'active' : ''}`}>
-                    <span className="navegacion" onClick={() => scrollToSection('empanadas')}>Empanadas</span>
-                    <span className="navegacion" onClick={() => scrollToSection('sucursales')}>Sucursales</span>
-                    <span className="navegacion" onClick={() => scrollToSection('nosotros')}>Nosotros</span>
-                    <span className="navegacion" onClick={() => scrollToSection('contacto')}>Contacto</span>
-
-               
-                    <div className="btnMobile">
-                        <Button
-                            titulo="Pedir Online"
-                            onClick={() => window.open('https://noninoempanadas.com/pedidos/', '_blank')}
-                        />
-                    </div>
-                </div>
-
-   
-                <div className="btnDesktop">
+                    <span className='navegacion' onClick={() => scrollToSection('empanadas')}>Empanadas</span>
+                    <span className='navegacion' onClick={() => scrollToSection('sucursales')}>Sucursales</span>
+                    <span className='navegacion' onClick={() => scrollToSection('nosotros')}>Nosotros</span>
+                    <span className='navegacion' onClick={() => scrollToSection('contacto')}>Contacto</span>
                     <Button
                         titulo="Pedir Online"
                         onClick={() => window.open('https://noninoempanadas.com/pedidos/', '_blank')}
                     />
                 </div>
             </div>
-        </nav>
+        </div>
     );
 };
 
