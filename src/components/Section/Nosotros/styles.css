@@ -63,7 +63,7 @@
 
 @media screen and (max-width: 480px) {
     .contenedorNosotros {
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: auto;
         gap: 2em;
     }

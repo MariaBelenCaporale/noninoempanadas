@@ -124,6 +124,7 @@
         flex-direction: column-reverse;
         height: auto;
         gap: 1em;
+        overflow: hidden;
     }
 
     .contieneImgHero {

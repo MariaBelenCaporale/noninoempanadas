@@ -37,6 +37,7 @@
     color: #EB0029;
     font-size: 1em;
     font-family: 'Poppins-Regular';
+    background-color: white;
 }
 
 .contieneCardSucursales {
@@ -67,6 +68,7 @@
     width: 600px;
     color: #010F1C;
     text-align: start;
+    background-color: white;
 }
 
 .textoSucursales {

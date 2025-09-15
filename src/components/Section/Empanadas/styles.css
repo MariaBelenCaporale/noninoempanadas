@@ -66,9 +66,7 @@
     gap: 1em;
 }
 
-.cardsContainer>* {
-    min-width: 200px;
-}
+
 
 .switch {
     display: flex;
@@ -109,7 +107,10 @@
     .empanadasContenedor {
         padding: 0px;
     }
-
+.carousel {
+    margin-top: 50px;
+    gap: 0px;
+}
     .textoEmpanadasTotal {
         width: 100%;
     }

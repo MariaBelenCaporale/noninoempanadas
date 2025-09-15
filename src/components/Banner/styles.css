@@ -91,6 +91,7 @@
     }
     .bannerTitulo {
         font-size: 1.8em;
+        width: 100%;
     }
     .subtituloBanner {
         font-size: .8em;

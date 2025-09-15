@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "Poppins-Medium";
-    src: url("../../assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
+  font-family: "Poppins-Medium";
+  src: url("../../assets/fonts/Poppins/Poppins-Medium.ttf") format("truetype");
 }
 
 .contenedorNav {
@@ -10,6 +10,7 @@
 .logoNav {
   width: 60px;
 }
+
 .contenedorUl {
   padding: 20px 30px;
   display: flex;
@@ -31,6 +32,7 @@
   font-size: .9em;
   cursor: pointer;
 }
+
 .navegacion:hover {
   color: #CA3001;
 }
@@ -70,28 +72,32 @@
     background-color: white;
     flex-direction: column;
     width: 200px;
-    padding: 20px;
-    gap: 1em;
+    padding: 50px 0px;
+    gap: 2em;
+    border-radius: 12px;
     display: none;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-  }
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  
+}
 
-  .navegacionTotal.active {
-    display: flex;
-  }
+.navegacionTotal.active {
+  display: flex;
+  z-index: 999;
+  width: 100%;
+}
 
-  .hamburger {
-    display: flex;
-  }
+.hamburger {
+  display: flex;
+}
 
-  .contenedorUl {
-    position: relative;
-  }
+.contenedorUl {
+  position: relative;
+}
 }
 
 @media screen and (max-width: 480px) {
   .contenedorNav {
-  width: 100%;
-}
+    width: 100%;
+  }
 
 }
