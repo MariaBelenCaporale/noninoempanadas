@@ -18,7 +18,7 @@
     -webkit-box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.10);
     overflow: hidden;
     width: 300px;
-    height: auto;
+        height: 400px;
     border-radius: 16px;
     display: flex;
     flex-direction: row;
@@ -37,9 +37,10 @@
 .informacionCard {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0px;
     width: 100%;
     padding: 20px 0px;
+    align-items: center;
 }
 
 .cardImg {
@@ -62,6 +63,7 @@
     padding: 0px 20px;
     align-items: flex-start;
     gap: .5em;
+        height: 130px;
 }
 
 .tituloCardLugar {

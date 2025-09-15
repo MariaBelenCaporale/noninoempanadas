@@ -107,10 +107,12 @@
     .empanadasContenedor {
         padding: 0px;
     }
-.carousel {
-    margin-top: 50px;
-    gap: 0px;
-}
+
+    .carousel {
+        margin-top: 50px;
+        gap: 0px;
+    }
+
     .textoEmpanadasTotal {
         width: 100%;
     }
