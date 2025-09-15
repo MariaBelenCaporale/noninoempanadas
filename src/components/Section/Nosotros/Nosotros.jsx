@@ -17,8 +17,8 @@ const Nosotros = () => {
                 />
             </div>
             <div className='contieneNosotrosTexto'>
-                <h2 className='nosotrosTitulo'> Acá va a ir un video de Nonino</h2>
-                <p className='nosotrosTexto'>Cuidamos cada paso del proceso de producción de nuestras empanadas.</p>
+                <h2 className='nosotrosTitulo'>El corazón de nuestras empanadas</h2>
+                <p className='nosotrosTexto'>Elaboramos cada empanada con dedicación, respetando la receta de siempre y asegurando calidad en cada paso..</p>
             </div>
         </div>
     )

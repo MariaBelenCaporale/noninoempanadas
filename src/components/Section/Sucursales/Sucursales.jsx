@@ -10,7 +10,7 @@ const Surcursales = () => {
             <div className='contenedorSucursalesTextos'>
                 <p className='subituloSuc'>Nuestras sucursales</p>
                 <h2 className='tituloSucursales'>Visitá nuestras sucursales</h2>
-                <p className='textoSucursales'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aut vitae ipsa adipisci nobis! Neque dolore itaque saepe. Asperiores, fugiat ullam? Doloribus molestias, quis inventore ipsam totam enim itaque facere?</p>
+                <p className='textoSucursales'>Estamos más cerca de lo que pensás. Vení a cualquiera de nuestras sucursales y llevate el sabor casero de siempre, recién hecho para vos.</p>
             </div>
 
             <div className='contenedorSuc'>
