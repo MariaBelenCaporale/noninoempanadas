@@ -162,6 +162,7 @@
 
     .switch {
         gap: 0px;
+            justify-content: space-between;
     }
 
     .tipoSwitch {

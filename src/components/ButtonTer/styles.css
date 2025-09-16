@@ -9,9 +9,12 @@
     width: auto;
     display: flex;
     cursor: pointer;
-    color: #EB0029;
+    color: #333333;
     font-size: .9em;
-    padding: 10px;
+    padding: 0px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
     font-family: 'Poppins-Medium';
 }
 
@@ -22,14 +25,14 @@
 
 
 .botonTer.active {
-    color: #CA3001;
+    color: #EB0029;
     transition: .2s all ease-in-out;
-    border: none;
-    padding: 10px;
+    border-bottom: 2px solid #EB0029;
+    padding: 0px;
     margin: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
-    background-color: #FFBC21;
+    /* border-radius: 12px; */
+    /* background-color: #FFBC21; */
 }
