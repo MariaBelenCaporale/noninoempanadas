@@ -84,29 +84,37 @@
 }
 
 
-@media only screen and (min-width: 0px) and (max-width: 768px){
+@media only screen and (min-width: 0px) and (max-width: 768px) {
     .contieneBanner {
         height: auto;
         margin: 5em 0em;
     }
+
     .bannerTitulo {
         font-size: 1.8em;
         width: 100%;
+        font-family: 'Rubik-Bold';
     }
+
     .subtituloBanner {
         font-size: .8em;
+        font-size: 'Poppins-Regular';
     }
+
     .ordenPasos {
         flex-direction: column;
         align-items: center;
         width: auto;
         background: rgba(255, 221, 204, 0.25);
     }
+
     .imgPasos {
         width: 170px;
     }
+
     .tituloPasos {
-            font-family: 'Poppins-Bold';
+        font-size: 1em;
+        font-family: 'Poppins-Bold';
     }
 }
 
@@ -114,15 +122,19 @@
     .imgPasos {
         width: 200px;
     }
+
     .pasosImgTextos {
         width: 300px;
     }
-    .textosBannerPasos, .tituloPasos {
+
+    .textosBannerPasos,
+    .tituloPasos {
         text-align: center;
         margin: 0px;
     }
+
     .textosOrdenBanner {
-            height: auto;
-            justify-content: space-between;
+        height: auto;
+        justify-content: space-between;
     }
 }

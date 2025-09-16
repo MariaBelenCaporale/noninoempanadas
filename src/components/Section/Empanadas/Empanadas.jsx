@@ -3,10 +3,13 @@ import './styles.css';
 import CardEmpanadas from '../../CardEmpanadas/CardEmpandas';
 
 
-import CarneMendocina from '../../../assets/imagenes/empanadaDos.png';
-import Verdura from '../../../assets/imagenes/empanadas.png';
-import CuatroQuesos from '../../../assets/imagenes/empanadaDos.png';
-import CiervoAhumado from '../../../assets/imagenes/empanadaTres.png';
+import QuesoAhumado from '../../../assets/imagenes/quesoAhumado.jpg';
+import CarneMendocina from '../../../assets/imagenes/mendocina.jpg';
+import Verdura from '../../../assets/imagenes/verdura.jpg';
+import CuatroQuesos from '../../../assets/imagenes/quesoAhumado.jpg';
+import CiervoAhumado from '../../../assets/imagenes/mendocina.jpg';
+import ButtonTer from '../../ButtonTer/ButtonTer';
+import Button from '../../Button/Button';
 
 
 const empanadasData = {
@@ -28,6 +31,7 @@ const empanadasData = {
         { imagen: Verdura, nombre: 'Champignones', descripcion: 'Verdeo y salsa blanca' },
         { imagen: CiervoAhumado, nombre: 'Neuquina', descripcion: 'Carne de ciervo, verdeo y morrón' },
         { imagen: CiervoAhumado, nombre: 'Cordero', descripcion: '...' },
+        { imagen: QuesoAhumado, nombre: 'Queso Ahumado', descripcion: 'quesoAhumado' },
         { imagen: CiervoAhumado, nombre: 'Mejicana', descripcion: 'Bondiola de cerdo con ají picante' },
     ],
     vegetarianas: [
@@ -47,27 +51,27 @@ const Empanadas = () => {
     const vegRef = useRef(null);
 
 
-useEffect(() => {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveTab(entry.target.dataset.tipo); 
-        }
-      });
-    },
-    {
-      root: null,
-      rootMargin: '-30% 0px -50% 0px',
-      threshold: 0,
-    }
-  );
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveTab(entry.target.dataset.tipo);
+                    }
+                });
+            },
+            {
+                root: null,
+                rootMargin: '-30% 0px -50% 0px',
+                threshold: 0,
+            }
+        );
 
-  const sections = document.querySelectorAll('.categoria-section');
-  sections.forEach((sec) => observer.observe(sec));
+        const sections = document.querySelectorAll('.categoria-section');
+        sections.forEach((sec) => observer.observe(sec));
 
-  return () => sections.forEach((sec) => observer.unobserve(sec));
-}, []);
+        return () => sections.forEach((sec) => observer.unobserve(sec));
+    }, []);
 
 
 
@@ -88,31 +92,32 @@ useEffect(() => {
                 </div>
             </div>
 
-            {/* Switch sticky */}
+
             <div className="switch">
-                <button
+                <ButtonTer
+                    active={activeTab === 'tradicionales'}
+                    titulo="Tradicionales"
                     className={`tipoSwitch ${activeTab === 'tradicionales' ? 'active' : ''}`}
                     onClick={() => scrollTo(tradRef, 'tradicionales')}
-                >
-                    Tradicionales
-                </button>
-                <button
+                />
+                <ButtonTer
+                    active={activeTab === 'especiales'}
+                    titulo="Especiales"
                     className={`tipoSwitch ${activeTab === 'especiales' ? 'active' : ''}`}
                     onClick={() => scrollTo(espRef, 'especiales')}
-                >
-                    Especiales
-                </button>
-                <button
+                />
+                <ButtonTer
+                    active={activeTab === 'vegetarianas'}
+                    titulo="Vegetarianas"
                     className={`tipoSwitch ${activeTab === 'vegetarianas' ? 'active' : ''}`}
                     onClick={() => scrollTo(vegRef, 'vegetarianas')}
-                >
-                    Vegetarianas
-                </button>
+                />
             </div>
 
 
             <div className="carousel">
                 <div ref={tradRef} data-tipo="tradicionales" className="categoria-section">
+                    
                     <div className="cardsContainer">
                         {empanadasData.tradicionales.map((emp, i) => (
                             <CardEmpanadas
@@ -126,6 +131,7 @@ useEffect(() => {
                     </div>
                 </div>
 
+                    <div className="categoriaTitulo"></div>
                 <div ref={espRef} data-tipo="especiales" className="categoria-section">
                     <div className="cardsContainer">
                         {empanadasData.especiales.map((emp, i) => (
@@ -140,6 +146,7 @@ useEffect(() => {
                     </div>
                 </div>
 
+                    <div className="categoriaTitulo"></div>
                 <div ref={vegRef} data-tipo="vegetarianas" className="categoria-section">
                     <div className="cardsContainer">
                         {empanadasData.vegetarianas.map((emp, i) => (

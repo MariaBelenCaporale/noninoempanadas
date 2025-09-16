@@ -9,21 +9,32 @@
 }
 
 .contenedorEmpanada {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-direction: column;
-    padding: 20px;
-    background: white;
+    width: 350px;
+    height: 350px;
+    display: flex
+;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: row;
     cursor: pointer;
-    margin-bottom: 70px;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+    flex-wrap: wrap;
+    gap: 0px;
+}
+
+.imgEmpanadas {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    display: flex
+;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+}
+.sabor {
+    object-fit: cover;
+    width: 100%;
 }
 
 .contenedorEmpanada:hover {
@@ -31,103 +42,68 @@
     transition: all .3s ease-in-out;
 }
 
-.descripcionEmpanada {
-    font-size: .9em;
-    font-family: 'Poppins-Regular';
-    color: #333333;
-}
-
-.textosOrdenCard {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
 .nombreEmpanada {
     font-size: 1em;
     color: #333333;
     font-family: 'Rubik-Bold';
+    text-align: center;
 }
 
-.sabor {
-    object-fit: cover;
-    width: 300px;
-
-}
-
-.imgEmpanadas {
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
-    width: 120px;
-    height: 120px;
-    border: .3em solid white;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 150px;
-    overflow: hidden;
-}
 
 .infoEmpanada {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    z-index: 10;
+    align-items: center;
     height: auto;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 
 @media screen and (max-width: 480px) {
     .contenedorEmpanada {
-        width: 120px;
-        padding: 15px;
-        margin-bottom: 50px;
-    }
-
-    .descripcionEmpanada {
-        font-size: .7em;
-    }
-
-    .nombreEmpanada {
-        font-size: .9em;
-    }
-
-    .infoEmpanada {
-        height: 140px;
-        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        gap: .5em;
     }
 
     .imgEmpanadas {
-        width: 80px;
-        height: 80px;
-        bottom: 170px;
+        width: 200px;
+        height: 200px;
+        border-radius: 12px;
+    }
+
+    .nombreEmpanada {
+        font-size: 1em;
     }
 
     .sabor {
-        width: 250px;
+        width: 200px;
     }
-    
+
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .imgEmpanadas {
         bottom: 180px;
     }
-    .nombreEmpanada, .descripcionEmpanada {
+
+    .nombreEmpanada,
+    .descripcionEmpanada {
         margin: 0px;
     }
-    
+
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .contenedorEmpanada {
         width: 150px;
     }
+
     .infoEmpanada {
         height: 130px;
     }

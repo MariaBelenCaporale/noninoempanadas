@@ -7,15 +7,29 @@
     background-color: white;
     border: none;
     width: auto;
-    padding: 15px 0px;
     display: flex;
     cursor: pointer;
     color: #EB0029;
     font-size: .9em;
+    padding: 10px;
     font-family: 'Poppins-Medium';
 }
 
 .botonTer:hover {
     color: #FFBC21;
     transition: .2s all ease-in-out;
+}
+
+
+.botonTer.active {
+    color: #CA3001;
+    transition: .2s all ease-in-out;
+    border: none;
+    padding: 10px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #FFBC21;
 }
