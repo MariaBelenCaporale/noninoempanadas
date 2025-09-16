@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import './styles.css';
 import CardEmpanadas from '../../CardEmpanadas/CardEmpandas';
+
+
 import CarneMendocina from '../../../assets/imagenes/empanadaDos.png';
 import Verdura from '../../../assets/imagenes/empanadas.png';
 import CuatroQuesos from '../../../assets/imagenes/empanadaDos.png';
 import CiervoAhumado from '../../../assets/imagenes/empanadaTres.png';
-import ButtonTer from '../../../components/ButtonTer/ButtonTer';
-
 
 
 const empanadasData = {
@@ -21,113 +21,138 @@ const empanadasData = {
         { imagen: CiervoAhumado, nombre: 'Mondongo', descripcion: '...' },
         { imagen: CiervoAhumado, nombre: 'Pollo', descripcion: '...' },
         { imagen: CiervoAhumado, nombre: 'Pollo al verdeo', descripcion: '...' },
-
-        { imagen: CiervoAhumado, nombre: 'Queso, cebolla y panceta', descripcion: '...' },
-        { imagen: CiervoAhumado, nombre: 'Jamón y queso', descripcion: '...' },
-        { imagen: CiervoAhumado, nombre: 'Roquefort, jamón y nuez', descripcion: '...' },
-
-        { imagen: CiervoAhumado, nombre: 'Española', descripcion: 'Cantimpalo, muzzarella y cayena' },
-
     ],
     especiales: [
         { imagen: Verdura, nombre: 'Atún', descripcion: '...' },
         { imagen: Verdura, nombre: 'Langostinos', descripcion: 'Langostinos, crema, ajo' },
         { imagen: Verdura, nombre: 'Champignones', descripcion: 'Verdeo y salsa blanca' },
         { imagen: CiervoAhumado, nombre: 'Neuquina', descripcion: 'Carne de ciervo, verdeo y morrón' },
-        { imagen: CiervoAhumado, nombre: 'Panceta y ciruela', descripcion: '...' },
         { imagen: CiervoAhumado, nombre: 'Cordero', descripcion: '...' },
         { imagen: CiervoAhumado, nombre: 'Mejicana', descripcion: 'Bondiola de cerdo con ají picante' },
-        { imagen: CiervoAhumado, nombre: 'Trucha', descripcion: '...' },
-        { imagen: CiervoAhumado, nombre: 'Ciervo ahumado', descripcion: '...' },
-        { imagen: CiervoAhumado, nombre: 'Queso ahumado', descripcion: 'Panceta y morrones' },
-        { imagen: CiervoAhumado, nombre: 'Osobuco', descripcion: '...' },
-
     ],
     vegetarianas: [
         { imagen: CiervoAhumado, nombre: 'Cuatro quesos', descripcion: '...' },
         { imagen: CiervoAhumado, nombre: 'Salteado de vegetales', descripcion: '...' },
         { imagen: CiervoAhumado, nombre: 'Soja', descripcion: 'Soja texturizada con cebolla, morrón, verdeo, ajo y huevo' },
-        { imagen: CiervoAhumado, nombre: 'Verdura', descripcion: '...' },
         { imagen: CiervoAhumado, nombre: 'Humita', descripcion: '...' },
-        { imagen: CiervoAhumado, nombre: 'Capresse', descripcion: '...' },
     ],
 };
 
 const Empanadas = () => {
-    const [tipo, setTipo] = useState('tradicionales');
-    const [visibleCount, setVisibleCount] = useState(4);
-    const itemsToShow = 4;
+    const [activeTab, setActiveTab] = useState('tradicionales');
 
-    const currentData = empanadasData[tipo];
 
-    const handleToggle = () => {
-        if (visibleCount >= currentData.length) {
-            setVisibleCount(itemsToShow);
-        } else {
-            setVisibleCount(prev => prev + itemsToShow);
+    const tradRef = useRef(null);
+    const espRef = useRef(null);
+    const vegRef = useRef(null);
+
+
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveTab(entry.target.dataset.tipo); 
         }
+      });
+    },
+    {
+      root: null,
+      rootMargin: '-30% 0px -50% 0px',
+      threshold: 0,
+    }
+  );
+
+  const sections = document.querySelectorAll('.categoria-section');
+  sections.forEach((sec) => observer.observe(sec));
+
+  return () => sections.forEach((sec) => observer.unobserve(sec));
+}, []);
+
+
+
+    const scrollTo = (ref, key) => {
+        setActiveTab(key);
+        ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     };
 
-
-
     return (
-        <div className='empanadasContenedor' id='empanadas'>
-
-            <div className='contenedorEmpanadasTextos'>
-                <div className='textoEmpanadasTotal'>
-                    <p className='subituloEmpanadas'>Nuestras empanadas</p>
-                    <h2 className='tituloEmpanadas'>Nuestra gran variedad</h2>
-                    <p className='textoEmpanadas'>
-                        Porque sabemos que cada antojo es distinto, te ofrecemos una gran variedad de empanadas: Tradicionales, especiales y vegetarianas. Todas recién horneadas, doradas y listas para disfrutar.
+        <div className="empanadasContenedor" id="empanadas">
+            <div className="contenedorEmpanadasTextos">
+                <div className="textoEmpanadasTotal">
+                    <p className="subituloEmpanadas">Nuestras empanadas</p>
+                    <h2 className="tituloEmpanadas">Nuestra gran variedad</h2>
+                    <p className="textoEmpanadas">
+                        Porque sabemos que cada antojo es distinto, te ofrecemos una gran variedad de empanadas: Tradicionales, especiales y vegetarianas.
                     </p>
                 </div>
             </div>
 
-            <div className='switch'>
+            {/* Switch sticky */}
+            <div className="switch">
                 <button
-                    className={`tipoSwitch ${tipo === 'tradicionales' ? 'active' : ''}`}
-                    onClick={() => { setTipo('tradicionales'); setVisibleCount(itemsToShow); }}
+                    className={`tipoSwitch ${activeTab === 'tradicionales' ? 'active' : ''}`}
+                    onClick={() => scrollTo(tradRef, 'tradicionales')}
                 >
                     Tradicionales
                 </button>
                 <button
-                    className={`tipoSwitch ${tipo === 'especiales' ? 'active' : ''}`}
-                    onClick={() => { setTipo('especiales'); setVisibleCount(itemsToShow) }}
+                    className={`tipoSwitch ${activeTab === 'especiales' ? 'active' : ''}`}
+                    onClick={() => scrollTo(espRef, 'especiales')}
                 >
                     Especiales
                 </button>
                 <button
-                    className={`tipoSwitch ${tipo === 'vegetarianas' ? 'active' : ''}`}
-                    onClick={() => { setTipo('vegetarianas'); setVisibleCount(itemsToShow) }}
+                    className={`tipoSwitch ${activeTab === 'vegetarianas' ? 'active' : ''}`}
+                    onClick={() => scrollTo(vegRef, 'vegetarianas')}
                 >
                     Vegetarianas
                 </button>
             </div>
 
 
-
-            <div className='carousel'>
-
-                <div className='cardsContainer'>
-                    {currentData.slice(0, visibleCount).map((empanada, index) => (
-                        <CardEmpanadas
-                            click={() => window.open('https://noninoempanadas.com/pedidos/', '_blank')}
-                            key={index}
-                            empanada={empanada.imagen}
-                            nombre={empanada.nombre}
-                            descripcion={empanada.descripcion}
-                        />
-                    ))}
+            <div className="carousel">
+                <div ref={tradRef} data-tipo="tradicionales" className="categoria-section">
+                    <div className="cardsContainer">
+                        {empanadasData.tradicionales.map((emp, i) => (
+                            <CardEmpanadas
+                                key={`trad-${i}`}
+                                click={() => window.open('https://noninoempanadas.com/pedidos/', '_blank')}
+                                empanada={emp.imagen}
+                                nombre={emp.nombre}
+                                descripcion={emp.descripcion}
+                            />
+                        ))}
+                    </div>
                 </div>
 
-                {currentData.length > itemsToShow && (
-                    <ButtonTer
-                        className='verMasBtn'
-                        titulo={visibleCount >= currentData.length ? 'Mostrar menos' : 'Mostrar más'}
-                        onClick={handleToggle}>
+                <div ref={espRef} data-tipo="especiales" className="categoria-section">
+                    <div className="cardsContainer">
+                        {empanadasData.especiales.map((emp, i) => (
+                            <CardEmpanadas
+                                key={`esp-${i}`}
+                                click={() => window.open('https://noninoempanadas.com/pedidos/', '_blank')}
+                                empanada={emp.imagen}
+                                nombre={emp.nombre}
+                                descripcion={emp.descripcion}
+                            />
+                        ))}
+                    </div>
+                </div>
 
-                    </ButtonTer>
-                )}
+                <div ref={vegRef} data-tipo="vegetarianas" className="categoria-section">
+                    <div className="cardsContainer">
+                        {empanadasData.vegetarianas.map((emp, i) => (
+                            <CardEmpanadas
+                                key={`veg-${i}`}
+                                click={() => window.open('https://noninoempanadas.com/pedidos/', '_blank')}
+                                empanada={emp.imagen}
+                                nombre={emp.nombre}
+                                descripcion={emp.descripcion}
+                            />
+                        ))}
+                    </div>
+                </div>
 
             </div>
         </div>

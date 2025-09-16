@@ -66,9 +66,20 @@
     gap: 1em;
 }
 
-
-
 .switch {
+  position: sticky;
+  top: 0;
+  z-index: 990;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  padding: 15px 0;
+  width: 100%;
+}
+
+
+/* .switch {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -76,7 +87,7 @@
     justify-content: center;
     gap: 2em;
     padding: 50px 0px;
-}
+} */
 
 .tipoSwitch {
     background-color: white;
