@@ -57,7 +57,7 @@
     text-align: center;
 }
 
-.tituloPasos {
+.tituloPasosBanner {
     color: #010F1C;
     font-family: 'Poppins-Bold';
     font-size: 1em;
@@ -90,7 +90,7 @@
         text-align: center;
     }
 
-    .tituloPasos {
+    .tituloPasosBanner {
         color: #010F1C;
         font-family: 'Poppins-Bold';
         font-size: 1em;
@@ -124,7 +124,7 @@
         width: 170px;
     }
 
-    .tituloPasos {
+    .tituloPasosBanner {
         font-size: 1em;
         font-family: 'Poppins-Bold';
     }
@@ -140,7 +140,7 @@
     }
 
     .textosBannerPasos,
-    .tituloPasos {
+    .tituloPasosBanner {
         text-align: center;
         margin: 0px;
     }
