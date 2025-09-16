@@ -87,24 +87,5 @@
 
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .imgEmpanadas {
-        bottom: 180px;
-    }
 
-    .nombreEmpanada,
-    .descripcionEmpanada {
-        margin: 0px;
-    }
 
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .contenedorEmpanada {
-        width: 150px;
-    }
-
-    .infoEmpanada {
-        height: 130px;
-    }
-}
