@@ -18,7 +18,7 @@ const Navbar = () => {
     };
 
     return (
-        <div className='contenedorNav'>
+        <div className='contenedorNav' id='nav' >
             <div className='contenedorUl'>
                 <Link to="/" className='navegacion'>
                     <img className='logoNav' src={Logo} alt='Logo Nonino' />

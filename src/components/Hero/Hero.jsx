@@ -18,7 +18,7 @@ const Hero = () => {
         }
     };
     return (
-        <div className='contenedorHero'>
+        <div className='contenedorHero' id='hero'>
             <div className='contieneTextoHero'>
                 <div>
                     <h1 className='tituloHero'>El sabor casero que <span className='tituloHeroItalic'>nunca </span>falla</h1>

@@ -20,7 +20,9 @@
     padding: 50px;
     border-radius: 24px 24px 0px 0px;
 }
-
+.contieneLogoFooter {
+    cursor: pointer;
+}
 .contieneFooter {
     display: flex;
     width: 100%;

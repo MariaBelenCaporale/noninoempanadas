@@ -17,7 +17,7 @@ const Footer = () => {
     return (
         <div className='footer'>
             <div className='contieneFooter'>
-                <div>
+                <div className='contieneLogoFooter' onClick={() => scrollToSection('nav')}>
                     <img className='logoFooter' src={Logo} alt='logo nonino' />
                 </div>
 
