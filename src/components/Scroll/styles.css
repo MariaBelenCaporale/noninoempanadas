@@ -19,3 +19,11 @@
     transition: all .5s ease-in-out;
     rotate: 360deg;
 }
+
+
+@media screen and (max-width: 480px) {
+    .flechaUp {
+        right: 20px;
+        bottom: 20px;
+    }
+}
