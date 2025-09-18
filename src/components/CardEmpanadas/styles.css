@@ -41,13 +41,14 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
+    gap: 1em;
 }
 .imgEmpanadas {
     width: 450px;
     height: 300px;
     overflow: hidden;
     border-radius: 12px;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     display: flex
 ;

@@ -3,42 +3,58 @@ import './styles.css';
 import CardEmpanadas from '../../CardEmpanadas/CardEmpandas';
 
 
-import QuesoAhumado from '../../../assets/imagenes/quesoAhumado.jpg';
-import CarneMendocina from '../../../assets/imagenes/mendocina.jpg';
-import Verdura from '../../../assets/imagenes/verdura.jpg';
-import CuatroQuesos from '../../../assets/imagenes/quesoAhumado.jpg';
-import CiervoAhumado from '../../../assets/imagenes/mendocina.jpg';
+import QuesoAhumado from '../../../assets/imagenes/empanadas/quesoAhumado.jpg';
+import Jamonyqueso from '../../../assets/imagenes/empanadas/jamonyqueso.jpg';
+import Humita from '../../../assets/imagenes/empanadas/humita.jpg';
+import PolloVerdeo from '../../../assets/imagenes/empanadas/polloVerdeo.jpg';
+import CarneMendocina from '../../../assets/imagenes/empanadas/mendocina.jpg';
+import Verdura from '../../../assets/imagenes/empanadas/verdura.jpg';
+import Ciervo from '../../../assets/imagenes/empanadas/ciervo.jpg';
+import QusoAhumado from '../../../assets/imagenes/empanadas/quesoAhumado.jpg';
+import Primera from '../../../assets/imagenes/empanadas/primera.jpg';
+import Segunda from '../../../assets/imagenes/empanadas/segunda.jpg';
+import Panceta from '../../../assets/imagenes/empanadas/pancetayciruela.jpg';
 import ButtonTer from '../../ButtonTer/ButtonTer';
-import Button from '../../Button/Button';
+
 
 
 const empanadasData = {
     tradicionales: [
         { imagen: CarneMendocina, nombre: 'Carne Mendocina', descripcion: 'Carne molida, cebolla, aceituna y huevo' },
-        { imagen: Verdura, nombre: 'Carne Salteña', descripcion: 'Carne cortada a cuchillo, papa y verdeo' },
-        { imagen: CuatroQuesos, nombre: 'Carne Tucumana', descripcion: 'Carne cortada a cuchillo, picante' },
-        { imagen: CiervoAhumado, nombre: 'Carne Pampeana', descripcion: 'Carne cortada a cuchillo, macerada en vino' },
-        { imagen: CarneMendocina, nombre: 'Árabe', descripcion: '...' },
-        { imagen: Verdura, nombre: 'Hamburguesa y cheddar', descripcion: '...' },
-        { imagen: CuatroQuesos, nombre: 'Chorizo a la pomarola', descripcion: '...' },
-        { imagen: CiervoAhumado, nombre: 'Mondongo', descripcion: '...' },
-        { imagen: CiervoAhumado, nombre: 'Pollo', descripcion: '...' },
-        { imagen: CiervoAhumado, nombre: 'Pollo al verdeo', descripcion: '...' },
+        { imagen: Primera, nombre: 'Carne Salteña', descripcion: 'Carne cortada a cuchillo, papa y verdeo' },
+        { imagen: Segunda, nombre: 'Carne Tucumana', descripcion: 'Carne cortada a cuchillo, picante' },
+        { imagen: Primera, nombre: 'Carne Pampeana', descripcion: 'Carne cortada a cuchillo, macerada en vino' },
+        { imagen: Segunda, nombre: 'Árabe', descripcion: '' },
+        { imagen: Primera, nombre: 'Hamburguesa y cheddar', descripcion: '' },
+        { imagen: Segunda, nombre: 'Chorizo a la pomarola', descripcion: '' },
+        { imagen: Primera, nombre: 'Mondongo', descripcion: '' },
+        { imagen: PolloVerdeo, nombre: 'Pollo', descripcion: '' },
+        { imagen: PolloVerdeo, nombre: 'Pollo al verdeo', descripcion: '' },
+        { imagen: Primera, nombre: 'Queso, cebolla y panceta', descripcion: '' },
+        { imagen: Jamonyqueso, nombre: 'Jamón y queso', descripcion: 'Jamón, queso y orégano' },
+        { imagen: Segunda, nombre: 'Roquefort, jamón y nuez', descripcion: '' },
+        { imagen: Primera, nombre: 'Española', descripcion: 'Cantimpalo, muzzarella y cayena' },
     ],
     especiales: [
-        { imagen: Verdura, nombre: 'Atún', descripcion: '...' },
-        { imagen: Verdura, nombre: 'Langostinos', descripcion: 'Langostinos, crema, ajo' },
-        { imagen: Verdura, nombre: 'Champignones', descripcion: 'Verdeo y salsa blanca' },
-        { imagen: CiervoAhumado, nombre: 'Neuquina', descripcion: 'Carne de ciervo, verdeo y morrón' },
-        { imagen: CiervoAhumado, nombre: 'Cordero', descripcion: '...' },
-        { imagen: QuesoAhumado, nombre: 'Queso Ahumado', descripcion: 'quesoAhumado' },
-        { imagen: CiervoAhumado, nombre: 'Mejicana', descripcion: 'Bondiola de cerdo con ají picante' },
+        { imagen: Primera, nombre: 'Atún', descripcion: '' },
+        { imagen: Segunda, nombre: 'Langostinos', descripcion: '' },
+        { imagen: Segunda, nombre: 'Neuquina', descripcion: 'Carne de ciervo, verdeo y morrón' },
+        { imagen: Panceta, nombre: 'Panceta y ciruela', descripcion: '' },
+        { imagen: Primera, nombre: 'Cordero', descripcion: '' },
+        { imagen: Segunda, nombre: 'Mejicana', descripcion: 'Bondiola de cerdo con ají picante' },
+        { imagen: Primera, nombre: 'Trucha', descripcion: '' },
+        { imagen: Ciervo, nombre: 'Ciervo Ahumado', descripcion: '' },
+        { imagen: QuesoAhumado, nombre: 'Queso Ahumado', descripcion: 'Panceta y morrones' },
+        { imagen: Ciervo, nombre: 'Osobuco', descripcion: '' },
     ],
     vegetarianas: [
-        { imagen: CiervoAhumado, nombre: 'Cuatro quesos', descripcion: '...' },
-        { imagen: CiervoAhumado, nombre: 'Salteado de vegetales', descripcion: '...' },
-        { imagen: CiervoAhumado, nombre: 'Soja', descripcion: 'Soja texturizada con cebolla, morrón, verdeo, ajo y huevo' },
-        { imagen: CiervoAhumado, nombre: 'Humita', descripcion: '...' },
+        { imagen: Primera, nombre: 'Capresse', descripcion: '' },
+        { imagen: Verdura, nombre: 'Verdura', descripcion: '' },
+        { imagen: Humita, nombre: 'Humita', descripcion: 'Choclo y queso' },
+        { imagen: QuesoAhumado, nombre: 'Cuatro quesos', descripcion: '' },
+        { imagen: Segunda, nombre: 'Salteado de vegetales', descripcion: '' },
+        { imagen: Primera, nombre: 'Champignones', descripcion: 'Verdeo y salsa blanca' },
+        { imagen: Segunda, nombre: 'Soja', descripcion: 'Soja texturizada con cebolla, morrón, verdeo, ajo y huevo' },
     ],
 };
 
@@ -117,7 +133,7 @@ const Empanadas = () => {
 
             <div className="carousel">
                 <div ref={tradRef} data-tipo="tradicionales" className="categoria-section">
-                    
+
                     <div className="cardsContainer">
                         {empanadasData.tradicionales.map((emp, i) => (
                             <CardEmpanadas
@@ -131,7 +147,7 @@ const Empanadas = () => {
                     </div>
                 </div>
 
-                    <div className="categoriaTitulo"></div>
+                <div className="categoriaTitulo"></div>
                 <div ref={espRef} data-tipo="especiales" className="categoria-section">
                     <div className="cardsContainer">
                         {empanadasData.especiales.map((emp, i) => (
@@ -146,7 +162,7 @@ const Empanadas = () => {
                     </div>
                 </div>
 
-                    <div className="categoriaTitulo"></div>
+                <div className="categoriaTitulo"></div>
                 <div ref={vegRef} data-tipo="vegetarianas" className="categoria-section">
                     <div className="cardsContainer">
                         {empanadasData.vegetarianas.map((emp, i) => (
