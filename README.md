@@ -1,12 +1,25 @@
-# React + Vite
+# Nonino Empanadas - Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Nonino es una empresa familiar dedicada a la venta de empanadas. Ellos ya tenían su sitio para pedir online, pero necesitaban un sitio institucional para darse a conocer aún más. Es por esto que desarrollé una landing page sencilla que permite a los usuarios conocer más sobre la empresa y ver su catálogo. Se agregaron llamados a la acción que redirigen a su actual sitio para pedir online.
 
-Currently, two official plugins are available:
+## 🚀 Demo
+👉 [Ver sitio en vivo](https://noninoempanadas.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Características
+- Landing page informativa y responsive.
+- Desarrollada con React JS.
+- Diseño moderno.
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías
+- React JS
+- JavaScript
+- Vercel (deploy)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Instalación
+Cloná el repositorio y ejecutá el proyecto localmente:
+
+```bash
+git clone https://github.com/usuario/proyecto.git
+cd proyecto
+npm install
+npm run dev
