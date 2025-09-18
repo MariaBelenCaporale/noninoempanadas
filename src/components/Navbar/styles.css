@@ -99,6 +99,9 @@
   .contenedorNav {
     width: 100%;
   }
+  .contenedorUl {
+    padding: 0px;
+  }
 
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {

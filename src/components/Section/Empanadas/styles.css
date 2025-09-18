@@ -161,8 +161,16 @@
     }
 
     .switch {
-        gap: 0px;
-            justify-content: space-between;
+        height: 70px;
+        gap: 1em;
+        justify-content: space-between;
+        width: 100%;
+        background: white;
+        padding: 0px;
+        display: flex
+;
+        align-items: center;
+        justify-content: center;
     }
 
     .tipoSwitch {
